@@ -18,12 +18,13 @@ def sign_up():
         firstName = request.form.get('firstName')
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
+        print(email, firstName, password1, password2)
 
         if len(email) < 4:
             flash('Email should be more than 3 characters long', category='error')
         elif len(firstName) < 2:
             flash('First name should be more than 1 characters long', category='error')
-        elif password1==password2:
+        elif password1!=password2:
             flash('Passwords don\'t match', category='error')
         elif len(password1) < 7:
             flash('Password should be more than 6 characters long', category='error')
