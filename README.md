@@ -1,6 +1,6 @@
 # **Nivel-notes**
 
-## A note-taking app written with Flask in Python. Based on [Tech with Tim's tutorial on youtube](https://www.youtube.com/watch?v=dam0GPOAvVI)
+## A simple note-taking web-app written in Python using flask. Based on [Tech with Tim's tutorial on youtube](https://www.youtube.com/watch?v=dam0GPOAvVI)
 
 
 ## Issues :
