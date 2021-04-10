@@ -2,14 +2,18 @@
 {% block content %}
 <h1>Notes</h1>
 <ul class="list-group list-group-flush" id="notes">
-    {% for note in user.notes %}
-        <li class="list-group-item">
-            {{note.data}}
-            <button type="button" class="close" onClick="deleteNote({{ note.id }})">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </li>
-    {% endfor %}
+    {% if not user.notes %}
+        <h5>No notes added yet..</h5>
+    {% else %}
+        {% for note in user.notes %}
+            <li class="list-group-item">
+                {{note.data}}
+                <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </li>
+        {% endfor %}
+    {% endif %}
 </ul>
 
 <form method="POST">
